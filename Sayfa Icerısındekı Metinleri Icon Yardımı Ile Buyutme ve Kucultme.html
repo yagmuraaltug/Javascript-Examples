@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="tr-TR">
+<head>
+<meta  http-equiv="content-type" content="text/html; charset=utf-8">
+<title>Rain Consultancy</title>
+	<style>
+		body{
+			margin: 0;
+			
+		}
+		#kapsam{
+			width: 100%;
+			height: 100%;
+			text-align: center;
+		
+			
+			
+		}
+		#haberalani{
+			width: 1000px;
+			margin: 0 auto;
+			
+		}
+		#baslikalani{
+			float: left;
+			width: 900px;
+			height: 60px;
+			text-align: center;
+			
+			
+		}
+		
+		#iconalani{
+			float: left;
+			width: 100px;
+			text-align: right;
+			height: 45px;
+			padding-top: 15px;
+		}
+	
+		#icerik{
+			text-align: justify;
+			font-size: 15px;
+			
+			
+		}
+	</style>
+</head>
+
+<body>
+	<div id="kapsam">
+	  <div id="haberalani">
+		<div id="baslikalani"><h3>YAZARLAR</h3></div>
+		<div id="iconalani"><img src="ıconlar/buyut.jpg" title="Metni Buyut" style="cursor: pointer;" onClick="buyut()"><img src="ıconlar/kucult.jpg" title="Metni Kucult" style="cursor: pointer;" onClick="kucult()"></div>
+		  <hr>
+		  <div id="icerik">Vikipedi, gönüllülerin ortaklaşa çabası doğrultusunda ve neredeyse herkesin web sitesine ulaşıp değiştirmesiyle yazılmaktadır. Vikipedi'ye bilgi girişi yapabilmek için üye olma zorunluluğu yoktur. Bu durum bilgilerin herkes tarafından anında eklenebilmesine olanak verir. Bununla beraber üye olmanın, yapılan değişikliklerin kaydını tutabilmek, seçkin madde vb. oylamalarına katılmak, vandalizmle mücadeleyi kolaylaştırmak gibi avantajları vardır.
+
+Diğer İnternet ansiklopedi projelerinin çoğu üyelik gerektirir ve yalnızca uzmanların yazılarına izin vermektedir: Stanford Encyclopedia of Philosophy, Nupedia, h2g2 ve Everything2 gibi. Bazı ansiklopediler de Vikipedi gibi Viki yazılımı kullanmaktadır. Diğer ansiklopedilerden farklı olarak, Vikipedi GNU Özgür Belgeleme Lisansı (GÖBL) kullanmaktadır.
+
+Vikipedi'ye yazılan bilgilerin uygunluğu konusunda bazı kurallar mevcuttur. Bilgiler tartışılır, değerlendirilir ve içeriğe eklenmesi, değiştirilmesi veya Vikisözlük gibi kardeş bir projeye transfer olması üzerine kararlar alınır. Vikipedi'nin ana kurallarından biri maddelerin tarafsız bir şekilde, kaynaklarıyla birlikte, olumlu ya da olumsuz tüm yönleriyle sunulması gerektiğidir. Vikipedi, maddeleri tamamen objektif ve doğru bir şekilde sunmaya ve her türlü bakış açısını yansıtmaya çalışır. Maddeler kullanıcıların kolaylıkla anlayabileceği bir sunuş kısmının (giriş) ardından ayrıntıya girilerek, günümüz itibarıyla doğrulanabilecek kaynaklarla sunulmalıdır.
+
+
+Jimmy Wales, Vikipedi'nin kurucusu
+2020'de yayımlanan verilere göre İngilizce Vikipedi sürümünde 31 binden fazla aktif editör varken diğer dillerde binden fazla aktif editörü olan Vikipedi projelerinin sayısı 11'dir. Wikimedia Vakfı'nın 2019'da yayımladığı verilere göre editörlerin %91'i erkek ve %77'si beyazdır.</div>
+		</div>	
+	
+	</div>
+<script type="text/javascript" language="javascript">
+	var standartboyut = 15;
+function buyut(){
+	standartboyut    = standartboyut+1;
+	document.getElementById("icerik").style.fontSize = standartboyut + "px";
+	
+} 
+	function kucult(){
+	standartboyut    = standartboyut-1;
+	document.getElementById("icerik").style.fontSize = standartboyut + "px";
+			
+		
+	}
+</script>
+</body>
+</html>

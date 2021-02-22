@@ -1,0 +1,107 @@
+<!doctype html>
+<html lang="tr-TR">
+<head>
+<meta  http-equiv="content-type" content="text/html; charset=utf-8">
+<title>Rain Consultancy</title>
+	<style>
+	#kapsam{
+	 position: relative;
+	 width:1200px;
+	 height: 500px;
+	 border: 1px solid black;
+	 margin: 0 auto;
+	
+	
+	}
+		#alan{
+			width: 100%;
+			height: 544px;
+			margin:0 auto;
+			text-align: center;
+			
+		}
+		#baslik{
+			width: 1200px;
+			height: 30px;
+			margin:0 auto;
+			text-align: center;
+			padding-top: 10px;
+			background-color: #F1F1F1;
+			font-weight: bold;
+			border: 1px solid black;
+			
+		}
+	</style>
+</head>
+
+<body>
+<div id="alan">
+	<div id="baslik">Personel Basari Yuzdesi</div>
+	<div id="kapsam">
+	  <div id="isimbir" style="width: 195px; height: 25px; float: left;  text-align: left; padding-top: 5px; padding-left: 5px;">Yagmur Altug</div><div id="grafikbir" style="width: 0px; height: 20px; margin-top: 5px; margin-bottom: 5px; float: left;"><div id="degerbir" style="padding-top: 2px; font-size: 14px; text-align: right; color: purple;"></div></div>
+		
+	<br /><br /><br />
+		
+	<div id="isimiki" style="width: 195px; height: 25px; float: left;  text-align: left; padding-top: 5px; padding-left: 5px;">Unsal Altug</div><div id="grafikiki" style="width: 0px; height: 20px; margin-top: 5px; margin-bottom: 5px; float: left; :"><div id="degeriki" style="padding-top: 2px; font-size: 14px; text-align: right; color: purple;"></div></div>
+	
+	
+	
+</div>
+	
+	
+	
+	</div>
+<script type="text/javascript" language="javascript">
+	var toplamalan = 1000;
+	
+	var grafikalan1 = document.getElementById("grafikbir");
+	var yuzde1     = 85;
+	var hesaplabir = 100 / yuzde1;
+	var pikselbir  =  toplamalan / hesaplabir;
+	var baslangicbir = 0;
+	
+	var zamanbir   = setInterval(function(){
+		if(yuzde1>50){
+		grafikalan1.style.backgroundColor = "#F0EB5D";
+		   }else{
+	    grafikalan1.style.backgroundColor = "#467CD9"
+
+		   }
+
+
+		document.getElementById("grafikbir").style.width = baslangicbir + "px";
+		baslangicbir = baslangicbir +1;
+		if(baslangicbir >= pikselbir){
+		   document.getElementById("degerbir").innerHTML = "%" + yuzde1 + "&nbsp";
+		   clearInterval(zamanbir);
+		   }
+		
+		
+	},1);
+	
+	var grafikalan2 = document.getElementById("grafikiki");
+	var yuzde2     = 45;
+	var hesaplaiki = 100 / yuzde2;
+	var pikseliki  =  toplamalan / hesaplaiki;
+	var baslangiciki = 0;
+	
+	var zamaniki   = setInterval(function(){
+		if(yuzde2>50){
+		grafikalan2.style.backgroundColor = "#F0EB5D";
+		   }else{
+	    grafikalan2.style.backgroundColor = "#467CD9"
+
+		   }
+		document.getElementById("grafikiki").style.width = baslangiciki + "px";
+		baslangiciki = baslangiciki +1;
+		if(baslangiciki >= pikseliki){
+		   document.getElementById("degeriki").innerHTML = "%" + yuzde2 + "&nbsp";
+		   clearInterval(zamaniki);
+		   }
+		
+		
+	},1);
+
+</script>
+</body>
+</html>

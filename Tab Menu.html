@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="tr-TR">
+<head>
+<meta  http-equiv="content-type" content="text/html; charset=utf-8">
+<title>Rain Consultancy</title>
+	<style>
+		
+		ul{
+			margin: 0;
+			margin-bottom: 5px;
+		}
+		li{
+			display: inline;
+			margin: 0;
+			width: 200px;
+			height: 22px;
+			background-color: red;
+			padding-top:  5px;
+			padding-bottom: 5px;
+			padding-left: 5px;
+			padding-right: 50px;
+			color: aliceblue;
+			border: 1px solid black;
+			
+		}
+		div{
+			width: 519px;
+			margin-left:40px;
+			background-color: red;
+			padding: 5px;
+			height: 250px;
+			border: 1px solid black;
+		}
+	
+	</style>
+</head>
+
+<body>
+	<ul>
+	   <li onClick="goster('birincialan')" style="cursor: pointer">JavaScript Egitim Seti</li>
+	   <li onClick="goster('ikincialan')" style="cursor: pointer">PHP Egitim Seti</li>
+	   <li onClick="goster('ucuncualan')" style="cursor: pointer">CSS Egitim Seti</li>
+	
+	
+	</ul>
+	<div id="birincialan">JavaScript Icerigi</div>
+	<div id="ikincialan" style="display: none;">Php Icerigi</div>
+	<div id="ucuncualan" style="display: none;">Css icerigi</div>
+
+	
+<script type="text/javascript" language="javascript">
+	
+	 function tumunugizle(){
+		var alanlar = document.getElementsByTagName("DIV");
+		var uzunluk = alanlar.length;
+		for(var baslangic = 0; baslangic<uzunluk; baslangic++){
+			alanlar[baslangic].style.display = "none";
+		}
+		
+	}  
+	function goster(deger){
+		tumunugizle();
+		document.getElementById(deger).style.display = "block";
+	}
+
+</script>
+</body>
+</html>

@@ -1,0 +1,163 @@
+<!doctype html>
+<html lang="tr-TR">
+<head>
+<meta  http-equiv="content-type" content="text/html; charset=utf-8">
+<title>Rain Consultancy</title>
+<script type="text/javascript" language="javascript">
+	function formkontrolu(){
+		if(document.getElementById("kullaniciadi").value==""){
+		   alert("Kullanici Adi Alani bos birakilamaz");
+			document.uyelikformu.kullaniciadi.focus();
+			return;
+			
+		   }
+		if(document.getElementById("kullaniciadi").value!=""){
+		   if(document.getElementById("kullaniciadi").value.length<4 || document.getElementById("kullaniciadi").value.length>25){
+			  
+			 alert("Kullanici adi Min 4 ve Max 25 karakterli olmalidir.")
+			 document.uyelikformu.kullaniciadi.value = "";
+			document.uyelikformu.kullaniciadi.focus();
+			return;
+			  
+			  }
+			
+		}
+		if(document.getElementById("kullanicisifresi").value==""){
+		alert("Kullanici Sifre Alani bos birakilamaz");
+	    document.uyelikformu.kullanicisifresi.focus();
+			return;
+			
+		   }
+		   if(document.getElementById("kullanicisifresi").value!=""){
+		   if(document.getElementById("kullanicisifresi").value.length<4 || document.getElementById("kullanicisifresi").value.length>25){
+			  
+			 alert("Kullanici sifresi Min 4 ve Max 25 karakterli olmalidir.")
+			 document.uyelikformu.kullanicisifresi.value = "";
+			 document.uyelikformu.kullanicisifresitekrar.value = "";		document.uyelikformu.kullanicisifresi.focus();
+			return;
+			  
+			  }
+			
+		}
+		if(document.getElementById("kullanicisifresitekrar").value==""){
+		alert("Kullanici Sifre Tekrar Alani bos birakilamaz");
+	    document.uyelikformu.kullanicisifresitekrar.focus();
+			return;
+			
+		   }
+		   if(document.getElementById("kullanicisifresitekrar").value!=""){
+		   if(document.getElementById("kullanicisifresitekrar").value.length<4 || document.getElementById("kullanicisifresitekrar").value.length>25){
+			  
+			 alert("Kullanici sifresi tekrari Min 4 ve Max 25 karakterli olmalidir.")
+			document.uyelikformu.kullanicisifresi.value = "";
+			document.uyelikformu.kullanicisifresitekrar.value = "";
+			document.uyelikformu.kullanicisifresi.focus();
+			return;
+			  
+			  }
+			
+		}
+		if(document.getElementById("kullanicisifresi").value!="" && document.getElementById("kullanicisifresitekrar").value!="" ){
+			if(   
+document.getElementById("kullanicisifresi").value!=document.getElementById("kullanicisifresitekrar").value){
+				alert("Kullanici sifresi ve tekrari birbiri ile eslesmedi")
+		    document.uyelikformu.kullanicisifresi.value = "";
+			document.uyelikformu.kullanicisifresitekrar.value = "";
+			document.uyelikformu.kullanicisifresi.focus();
+			return;
+			   }
+			
+		}
+		if(document.getElementById("email").value==""){
+		   alert("Email Alani bos birakilamaz");
+			document.uyelikformu.email.focus();
+			return;
+			
+		   }
+		if(document.getElementById("email").value!=""){
+		   if(document.getElementById("email").value.indexOf("@", 0) == -1 || document.getElementById("email").value.indexOf(".", 0) == -1 ){
+			  
+			 alert("Email adresi uygun degildir.")
+			 document.uyelikformu.email.value = "";
+			document.uyelikformu.email.focus();
+			return;
+			  
+			  }
+			
+		}
+	if(document.getElementsByName("cinsiyet")[0].checked == false && document.getElementsByName("cinsiyet")[1].checked == false){
+		alert("Cinsiyet alani secilmelidir.")
+		return;
+	}
+	if(document.getElementsByName("hobiler")[0].checked == false && document.getElementsByName("hobiler")[1].checked == false && document.getElementsByName("hobiler")[2].checked == false){
+	alert("Hobiler alani secilmelidir.")
+		return;
+	}
+	    if(document.getElementById("kullanicinotu").value==""){
+		alert("Kullanici Notu Alani bos birakilamaz");
+	    document.uyelikformu.kullanicinotu.focus();
+			return;
+			
+		   }
+		
+		
+		
+		document.uyelikformu.submit();
+	}
+
+</script>
+</head>
+
+<body>
+	<form id="uyelikformu" name="uyelikformu" action="xxx.php" method="post">
+	  <table>
+		<tr>
+		  <th colspan="3">Uyelik formu</th>
+		  
+		  
+		  </tr>
+		<tr>
+		  <td>Kullanici Adi</td>
+		  <td>:</td>
+		  <td><input type="text" id="kullaniciadi" name="kullaniciadi"></td>
+		  </tr>
+		<tr>
+		  <td>Kullanici Sifresi</td>
+		  <td>:</td>
+		  <td><input type="password" id="kullanicisifresi" name="kullanicisifresi"></td>
+		 </tr>
+		<tr>
+		  <td>Kullanici Sifresi Tekrar</td>
+		  <td>:</td>
+		  <td><input type="password" id="kullanicisifresitekrar" name="kullanicisifresitekrar"></td>
+		 </tr>
+		<tr>
+		  <td>E-mail</td>
+		  <td>:</td>
+		  <td><input type="text" id="email" name="email"></td>
+		 </tr>
+		<tr>
+		  <td>Cinsiyet</td>
+		  <td>:</td>
+		  <td><input type="radio" id="cinsiyet" name="cinsiyet" value="Erkek">Erkek<input type="radio" id="cinsiyet2" name="cinsiyet" value="Kadin">Kadin</td>
+		 </tr>	
+		  <tr>
+		  <td>Hobiler</td>
+		  <td>:</td>
+		  <td><input type="checkbox" id="hobileri" name="hobiler" value="Alisveris">Alisveris<input type="checkbox" id="hobileri2" name="hobiler" value="Muzik">Muzik<input type="checkbox" id="hobileri3" name="hobiler" value="KitapOkumak">Kitap Okumak</td>
+		
+		  </tr>
+		<tr>
+		  <td>Not</td>
+		  <td>:</td>
+			<td><textarea id="kullanicinotu" name="kullanicinotu"></textarea> </td>
+		 </tr>
+		  <tr>
+			<td colspan="3" style="text-align: center"><input type="button" value="Gonder" onClick="formkontrolu()"></td>
+		 </tr>
+		
+		</table>
+	</form>
+
+</body>
+</html>

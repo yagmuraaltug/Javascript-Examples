@@ -1,0 +1,20 @@
+<!doctype html>
+<html lang="tr-TR">
+<head>
+<meta  http-equiv="content-type" content="text/html; charset=utf-8">
+<title>Rain Consultancy</title>
+</head>
+
+<body>
+<a href="javascript:ornek('https://www.google.com.tr', 1000, 650);">Google a git.</a>
+<script type="text/javascript" language="javascript">
+function ornek(adres, genislik, yukseklik){
+ var solhesap  = parseInt((screen.availWidth/2) -  (genislik/2));
+ var usthesap  = parseInt((screen.availHeight/2) -  (yukseklik/2));
+var ozellikler = "width=" + genislik + ",height=" + yukseklik + ",left=" + solhesap + ",top=" + usthesap;
+window.open(adres, "Google", ozellikler);
+	
+}
+</script>
+</body>
+</html>

@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="tr-TR">
+<head>
+<meta  http-equiv="content-type" content="text/html; charset=utf-8">
+<title>Rain Consultancy</title>
+</head>
+
+<body>
+<script type="text/javascript" language="javascript">
+var sira      = 1;
+var metinbir  = "JavaScript";
+var metiniki  = "CSS";
+var metinuc   = "Php";
+var metindort = "HTML";
+var metinbes  = "Python";
+
+	function ornek(){
+		if(sira==1){
+		   window.status = metinbir;
+		   document.title = metinbir;
+			sira++;
+		}else if(sira==2){
+		   window.status = metiniki;
+		   document.title = metiniki;
+			sira++;
+		}else if(sira==3){
+		   window.status = metinuc;
+		   document.title = metinuc;
+			sira++;
+		}else if(sira==4){
+		   window.status = metindort;
+		   document.title = metindort;
+			sira++;
+		}else if(sira==5){
+		   window.status = metinbes;
+		   document.title = metinbes;
+		   sira  = 1;
+		}
+		
+	window.setTimeout("ornek();", 2000)	
+	}
+	ornek();
+</script>
+</body>
+</html>

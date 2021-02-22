@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="tr-TR">
+<head>
+<meta  http-equiv="content-type" content="text/html; charset=utf-8">
+<title>Rain Consultancy</title>
+</head>
+
+<body>
+	<textarea id="alan" style="width: 500px; height: 250px;" onKeyPress="ornek()"></textarea>
+	<br />
+	<div>Kullanilan Karakter sayisi : <span id="kullanilankarakter">0</span></div>
+	<div>Kalan Karakter sayisi : <span id="kalankaraktersayisi">250</span></div>
+<script type="text/javascript" language="javascript">
+	var kullanilan = 0;
+	var kalan      = 249;
+
+function ornek(){
+	var baglan = document.getElementById("alan");
+	var uzunluk = baglan.value.length;
+	
+	if(uzunluk>=kalan){
+	   var deger    = baglan.value;
+		var olustur = deger.substr(0, kalan);
+	   document.getElementById("alan").value = olustur;
+	   document.getElementById("kullanilankarakter").innerHTML = kalan + 1;
+	   document.getElementById("kalankaraktersayisi").innerHTML = 0;
+	   }else{
+	    var deger    = baglan.value;
+		var olustur = deger.substr(0, kalan);
+		document.getElementById("alan").value = olustur;
+	    document.getElementById("kullanilankarakter").innerHTML = uzunluk + 1;
+	    document.getElementById("kalankaraktersayisi").innerHTML = (kalan +1)- (uzunluk + 1) ;
+
+	   }
+	
+
+}
+</script>
+</body>
+</html>
